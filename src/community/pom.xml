@@ -47,6 +47,7 @@
           <descriptor>release/ext-aggregate.xml</descriptor>
           <descriptor>release/ext-xslt.xml</descriptor>
           <descriptor>release/ext-wcs2_0.xml</descriptor>
+          <descriptor>release/ext-libjpeg-turbo.xml</descriptor>
         </descriptors>
       </configuration>
      </plugin>
@@ -159,6 +160,7 @@
         <module>script</module>
         <module>xslt</module>
         <module>wcs2_0</module>
+        <module>libjpeg-turbo</module>
       </modules>
     </profile>
     <profile>
@@ -260,5 +262,14 @@
         <module>w3ds</module>
       </modules>
     </profile>
+		<profile>
+			<id>libjpeg-turbo</id>
+      <activation>
+        <property><name>libjpeg-turbo</name></property>
+      </activation> 
+			<modules>
+				<module>libjpeg-turbo</module>
+			</modules>
+		</profile>    
   </profiles>
 </project>
