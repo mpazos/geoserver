@@ -492,6 +492,8 @@ public class AuthenticationFilterTest extends AbstractAuthenticationProviderTest
         assertNull(ctx);
         assertNull(SecurityContextHolder.getContext().getAuthentication());
         
+        updateUser("ug1", testUserName, true);
+        
         // Test anonymous
         insertAnonymousFilter();
         request= createRequest("/foo/bar");
@@ -1233,6 +1235,8 @@ public class AuthenticationFilterTest extends AbstractAuthenticationProviderTest
                 HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY);        
         assertNull(ctx);
         assertNull(SecurityContextHolder.getContext().getAuthentication());
+        
+        updateUser("ug1", testUserName, true);
         
         // Test anonymous
         insertAnonymousFilter();
