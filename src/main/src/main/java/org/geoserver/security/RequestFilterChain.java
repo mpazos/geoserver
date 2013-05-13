@@ -219,6 +219,9 @@ public abstract class RequestFilterChain implements Serializable,Cloneable {
         
         if (StringUtils.hasLength(getRoleFilterName()))
             result.add(getRoleFilterName());
+
+        // FIXME mauro HACK adding filter for GeoWebCache service 
+        result.add(GeoServerSecurityFilterChain.SECURITY_CONTEXT_GWC_FILTER);
         
         createCompiledFilterList(result);
         return result;

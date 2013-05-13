@@ -59,6 +59,9 @@ public class GeoServerSecurityFilterChain implements Serializable {
     public static final String ANONYMOUS_FILTER = "anonymous";
 
     public static final String BASIC_AUTH_FILTER = "basic";
+    
+	public static final String SECURITY_CONTEXT_GWC_FILTER = "gwcFilter";
+	
     //public static final String BASIC_AUTH_NO_REMEMBER_ME_FILTER = "basicAuthNrm";
 
     public static final String DYNAMIC_EXCEPTION_TRANSLATION_FILTER = "exception";
